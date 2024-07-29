@@ -1,0 +1,29 @@
+<div class="flex flex-row flex-wrap align-items-center justify-content-center w-full h-screen">
+  <p-card [header]="'Login'" subheader="">
+    <form id="loginForm" class="flex flex-column gap-3 p-0">
+      <div class="field">
+        <p-floatLabel>
+          <input id="username" type="text"
+                 class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+          <label for="username">Username</label>
+        </p-floatLabel>
+      </div>
+      <div class="field">
+        <p-floatLabel>
+          <p-password id="password" [feedback]="false" [toggleMask]="true"/>
+          <label for="password">Password</label>
+        </p-floatLabel>
+      </div>
+    </form>
+    <p-divider></p-divider>
+    <div class="p-card-footer">
+      <div class="flex flex-column gap-3">
+        <button pButton pRipple [label]="'Iniciar session'" [type]="'button'" form="loginForm"
+                class="border-round"></button>
+        <button pButton pRipple [label]="'Registrar usuario'" [type]="'button'" form="loginForm" [outlined]="true"
+                class="border-round"></button>
+      </div>
+    </div>
+  </p-card>
+</div>
+

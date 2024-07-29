@@ -1,8 +1,12 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {LOCALE_ID, NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import localeEsBo from '@angular/common/locales/es-BO';
+import {registerLocaleData} from '@angular/common'
+
+registerLocaleData(localeEsBo);
 
 @NgModule({
   declarations: [
@@ -10,9 +14,10 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'es-BO'}],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
